@@ -9,7 +9,7 @@ You can test it on [cs260.click](https://quote.cs260.click).
 ```json
 {
   "author":"John Romero",
-  "quote":"You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity."}
+  "quote":"You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity."
 }
 ```
 
