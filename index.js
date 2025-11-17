@@ -1,5 +1,6 @@
 const express = require('express');
 const quotes = require('./quotes.js');
+const jeffDeanQuotes = require('./jeffdeanquotes.js');
 
 const app = express();
 
@@ -8,6 +9,12 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   next();
+});
+
+app.get('/dean', (req, res) => {
+  const randomIndex = Math.floor(Math.random() * jeffDeanQuotes.length);
+  const randomQuote = jeffDeanQuotes[randomIndex];
+  res.json(randomQuote);
 });
 
 app.get('/*', (req, res) => {
